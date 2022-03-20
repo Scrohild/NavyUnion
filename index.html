@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二十三班海军联盟</title>
+		<script>
+				
+			function guide(i) {
+				if(i==1){
+					location.href="video.html"
+				}else if(i==2){
+					location.href="music.html"
+				}else if(i==3){
+					location.href="game.html"
+				}else if(i==4){
+					location.href="sb.html"
+				}
+			}
+			
+		</script>
+	</head>
+	<body id=body; style="background-color: #00FFFF; text-align: center;"; ">
+		<div id="title"; align="center";>
+			<h1>二十三班海军联盟</h1>
+			<h2>Navy Union</h2>	
+		</div>
+		<div id="guide"; align="center";>
+			<button id="index"; style="background-color: #008800;"; onclick=guide(0);>首页</button>
+			<button id="video"; style="background-color: #00FF00;"; onclick=guide(1);>视频</button>
+			<button id="music"; style="background-color: #00FF00;"; onclick=guide(2);>音乐</button>
+			<button id="game"; style="background-color: #00FF00;"; onclick=guide(3);>游戏</button>
+			<button id="sb"; style="background-color: #00FF00;"; onclick=guide(4);>降智</button>
+		</div>
+		<div id="value"; style="display:inline-block; *display:inline; zoom:1;">
+			<div style="weith: 200px; height: 240px; float: left; border: solid 1px #000000;">
+				<img src="Stalin.jpg"width="200"height="240"/>
+			</div>
+			<div style="weith: 200px; height: 240px; float: left; border: solid 1px #000000"; align="center">
+				<h4>你参加海军联盟了吗?</h4>
+				<h4>你很有精神吗?</h4>
+				<h4>二十三班海军联盟</h4>
+			</div>
+		</div>
+	</body>
+</html>

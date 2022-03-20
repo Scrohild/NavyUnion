@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二十三班海军联盟</title>
+		<script>
+				
+			function guide(i) {
+				if(i==0){
+					location.href="index.html"
+				}else if(i==1){
+					location.href="video.html"
+				}else if(i==2){
+					location.href="music.html"
+				}else if(i==4){
+					location.href="sb.html"
+				}
+			}
+			
+		</script>
+	</head>
+	<body id=body; style="background-color: #00FFFF; text-align: center;";>
+		<div id="title"; align="center";>
+			<h1>二十三班海军联盟</h1>
+			<h2>Navy Union</h2>
+		</div>
+		<div id="guide"; align="center";>
+			<button id="index"; style="background-color: #00FF00;"; onclick=guide(0);>首页</button>
+			<button id="video"; style="background-color: #00FF00;"; onclick=guide(1);>视频</button>
+			<button id="music"; style="background-color: #00FF00;"; onclick=guide(2);>音乐</button>
+			<button id="game"; style="background-color: #008800;"; onclick=guide(3);>游戏</button>
+			<button id="sb"; style="background-color: #00FF00;"; onclick=guide(4);>降智</button>
+		<table style="border: solid 1px #000000;"; align="center"; border="1">
+			<tr id="Minesweeper">
+				<td><button style="background-color: #00FFFF;"; onclick={location.href="Minesweeper.html"}>Minesweeper</button></td>
+				<td><h5>扫雷小游戏(代码是我抄的...)</h5></td>
+			</tr>
+			<tr id="LifeGame">
+				<td><button style="background-color: #00FFFF;"; onclick={location.href="http://nonoas.gitee.io/webproj/LifeGame/"}>LifeGame</button></td>
+				<td><h5>生命游戏,数学界的明星游戏(登入可能有点慢~)</h5></td>
+			</tr>
+			<tr id="MikuTap">
+				<td><button style="background-color: #00FFFF;"; onclick={location.href="https://hfiprogramming.github.io/mikutap/"}>MikuTap</button></td>
+				<td><h5>MikuTap,一个Tap,解压的小游戏,你能嗨一下午!(别问我怎么知道的..)</h5></td>
+			</tr>
+		</table>
+	</body>
+</html>

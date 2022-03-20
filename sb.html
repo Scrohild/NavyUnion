@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二十三班海军联盟</title>
+		<script>
+			var rouletteTimes = 0;
+			var counterTimes = 0;
+			
+			function guide(i) {
+				if(i==0){
+					location.href="index.html"
+				}else if(i==1){
+					location.href="video.html"
+				}else if(i==2){
+					location.href="music.html"
+				}else if(i==3){
+					location.href="game.html"
+				}
+			}
+			
+			function roulette() {
+				rouletteTimes++;
+				if(Math.random()<0.14){
+					window.alert("开了"+rouletteTimes+"枪,地府一日游");
+					document.write("<h1>逝者安息</h1>");
+				}else{
+					window.alert(rouletteTimes+"枪了,恭喜你还活着");
+				}
+				document.getElementById("rouletteShow").innerHTML="开了"+rouletteTimes+"枪"
+			}
+			
+			var hunderd = true;
+			var fiveHunder = true;
+			var thousand = true;
+			function counter(count) {
+				counterTimes += count;
+				document.getElementById("counterShow").innerHTML=counterTimes
+				
+				if(counterTimes>=100 && hunderd){
+					window.alert("100了!");
+					hunderd = false;
+				}else if(counterTimes>=500 && fiveHunder){
+					window.alert("500了,你是个狠人");
+					fiveHunder = false;
+				}else if(counterTimes>=950 && thousand){
+					window.alert("950了,你这是闲成啥样~");
+					thousand = false;
+				}else if(counterTimes>1000){
+					window.alert("要炸啦!");
+					document.write("<h1>逝者安息</h1>");
+				}
+			}
+		</script>
+	</head>
+	<body id=body; style="background-color: #00FFFF; text-align: center;";>
+		<div id="title"; align="center";>
+			<h1>二十三班海军联盟</h1>
+			<h2>Navy Union</h2>
+		</div>
+		<div id="guide"; align="center";>
+			<button id="index"; style="background-color: #00FF00;"; onclick=guide(0);>首页</button>
+			<button id="video"; style="background-color: #00FF00;"; onclick=guide(1);>视频</button>
+			<button id="music"; style="background-color: #00FF00;"; onclick=guide(2);>音乐</button>
+			<button id="game"; style="background-color: #00FF00;"; onclick=guide(3);>游戏</button>
+			<button id="sb"; style="background-color: #008800;"; onclick=guide(4);>降智</button>
+		</div>
+		<div id="value"; style="display:inline-block; *display:inline; zoom:1;">
+			<div id="roulette"; style="width: 200px; height: 200px; border: 1px solid #000000; float: left;"; align="center">
+				<h5>俄罗斯转盘!</h5>
+				<button style="background-color: #00FFFF;"; onclick=roulette();>点我开枪</button>
+				<h5 id="rouletteShow">开了0枪</h5>
+			</div>
+			<div id="counter"; style="width: 200px; height: 200px; border: 1px solid #000000; float: left;"; align="center">
+				<h5>冷总的计数器</h5>
+				<button style="background-color: #00FFFF;"; onclick=counter(1);>+1</button>
+				<button style="background-color: #00FFFF;"; onclick=counter(10);>+10</button>
+				<button style="background-color: #00FFFF;"; onclick=counter(Math.ceil(Math.random()*10));>随机</button>
+				<h5 id="counterShow">0</h5>
+			</div>
+		</div>
+	</body>
+</html>
